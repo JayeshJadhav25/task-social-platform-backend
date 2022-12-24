@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "a9a6419f-168d-4a60-9322-236481cb0efc",
+		"name": "social task api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTc0NDkzMGZhYWIyOWZhZDZhYjYxMiIsImVtYWlsIjoidGVzdDNAZ21haWwuY29tIiwibmFtZSI6ImpheWVzaCIsImlhdCI6MTY3MTkxNzU0Mn0.sLPex1V9VlVKRoGo7NdPwVayn7ELBSiwWFsUP5_e8gI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "test",
+							"type": "default"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/jayesh/Downloads/14.jpg"
+						},
+						{
+							"key": "title",
+							"value": "testing image",
+							"type": "default"
+						},
+						{
+							"key": "content",
+							"value": "This is test",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/post/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTc1ZGM0ZmEwMGJmNjAwMGUxZDJkNiIsImVtYWlsIjoidGVzdEBnbWFpbC5jb20iLCJuYW1lIjoibWFoZXNoIiwiaWF0IjoxNjcxOTE3NjEzfQ.jV2BxztoPoC5bsvSKko_k7U_oUryDgrw8n8XaNJEXcY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"postId\":\"63a76ff59cfd072bf8cf56c9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/post/like",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "my posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTc0NDkzMGZhYWIyOWZhZDZhYjYxMiIsImVtYWlsIjoidGVzdDNAZ21haWwuY29tIiwibmFtZSI6ImpheWVzaCIsImlhdCI6MTY3MTkxNzU0Mn0.sLPex1V9VlVKRoGo7NdPwVayn7ELBSiwWFsUP5_e8gI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/post/myposts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post",
+						"myposts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all posts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYTc0NDkzMGZhYWIyOWZhZDZhYjYxMiIsImVtYWlsIjoidGVzdDNAZ21haWwuY29tIiwibmFtZSI6ImpheWVzaCIsImlhdCI6MTY3MTkxNzU0Mn0.sLPex1V9VlVKRoGo7NdPwVayn7ELBSiwWFsUP5_e8gI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/post/allposts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post",
+						"allposts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@gmail.com\",\n    \"password\": \"test\",\n    \"name\": \"mahesh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
